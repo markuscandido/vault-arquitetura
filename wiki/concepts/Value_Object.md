@@ -1,26 +1,26 @@
 ---
 title: Value Object
-tags: [pattern, base]
-status: detailed
+tags: [padrao, base]
+status: detalhado
 date: 2026-05-01
 ---
 
 # Value Object
 
-A small simple object, like money or a date range, whose equality isn't based on identity.
+Um objeto pequeno e simples, como dinheiro ou um intervalo de datas, cuja igualdade não é baseada em identidade.
 
-## How it Works
-Two Value Objects are considered "the same" if their values are equal, even if they are different instances in memory.
-- Example: Two $5 bills are functionally identical for most business purposes.
-- Example: Two `DateRange` objects representing "2026-01-01 to 2026-01-02" are equal.
+## Como Funciona
+Dois Value Objects são considerados "o mesmo" se seus valores forem iguais, mesmo que sejam instâncias diferentes na memória.
+- Exemplo: Duas notas de R$ 5 são funcionalmente idênticas para a maioria dos propósitos de negócio.
+- Exemplo: Dois objetos `DateRange` representando "2026-01-01 a 2026-01-02" são iguais.
 
-## Core Rules
-1. **Immutability**: Once created, a Value Object should never change. To "change" it, you create a new instance.
-2. **Value-based Equality**: Overwrite the `equals()` and `hashCode()` methods to compare fields rather than memory addresses.
+## Regras Centrais
+1. **Imutabilidade**: Uma vez criado, um Value Object nunca deve mudar. Para "alterá-lo", você cria uma nova instância.
+2. **Igualdade Baseada em Valor**: Sobrescreva os métodos `equals()` e `hashCode()` para comparar campos em vez de endereços de memória.
 
-## Benefits
-- **No Side Effects**: Since they are immutable, you can pass them around without worrying that another part of the system will change their value.
-- **Simplifies Logic**: You don't need to track identity for small concepts.
+## Benefícios
+- **Sem Efeitos Colaterais**: Como são imutáveis, você pode passá-los sem se preocupar que outra parte do sistema altere seu valor.
+- **Simplifica a Lógica**: Você não precisa rastrear identidade para conceitos pequenos.
 
-## Source
-- [[PEAA_Book]] (Chapter 18, Page 453)
+## Fonte
+- [[Livro_PEAA]] (Capítulo 18, Página 453)

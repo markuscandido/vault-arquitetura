@@ -7,23 +7,23 @@ date: 2026-05-01
 
 # Front Controller
 
-A single handler that centralizes all requests for a Web site.
+Um único manipulador que centraliza todas as requisições de um site Web.
 
-## How it Works
-Instead of having a separate [[Page_Controller]] for every URL, a Front Controller uses a single object to receive all incoming requests. This controller then delegates the work to "command" or "action" objects.
+## Como Funciona
+Em vez de ter um [[Page_Controller]] separado para cada URL, um Front Controller usa um único objeto para receber todas as requisições recebidas. Este controlador então delega o trabalho para objetos "comando" (command) ou "ação" (action).
 
-### Responsibilities
-1. **Centralized Logic**: Handles common tasks like security, internationalization, logging, and routing in one place.
-2. **Routing**: Decodes the URL and decides which action/command object should handle the business logic.
-3. **View Management**: Decides which view to display based on the result of the action.
+### Responsabilidades
+1. **Lógica Centralizada**: Lida com tarefas comuns como segurança, internacionalização, log e roteamento em um só lugar.
+2. **Roteamento**: Decodifica a URL e decide qual objeto de ação/comando deve lidar com a lógica de negócio.
+3. **Gerenciamento de Visão (View)**: Decide qual visão exibir com base no resultado da ação.
 
-### Implementation
-- Usually implemented as a **Servlet** (Java) or a **global script** (PHP/ASP) that acts as the entry point for the entire application.
-- Uses a **Command Map** or a dynamic loading mechanism to find the right action class for a request.
+### Implementação
+- Geralmente implementado como um **Servlet** (Java) ou um **script global** (PHP/ASP) que atua como o ponto de entrada para toda a aplicação.
+- Usa um **Mapa de Comandos** ou um mecanismo de carregamento dinâmico para encontrar a classe de ação correta para uma requisição.
 
-## Benefits
-- **Avoids Duplication**: Common request-handling logic is not repeated across multiple pages.
-- **Easily Extensible**: Adding new pages or actions only requires adding a new command class and updating the mapping.
+## Benefícios
+- **Evita Duplicação**: A lógica comum de manipulação de requisições não é repetida em várias páginas.
+- **Facilmente Extensível**: Adicionar novas páginas ou ações requer apenas a adição de uma nova classe de comando e a atualização do mapeamento.
 
-## Source
-- [[PEAA_Book]] (Chapter 14, Page 328)
+## Fonte
+- [[Livro_PEAA]] (Capítulo 14, Página 328)

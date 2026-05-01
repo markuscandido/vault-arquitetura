@@ -1,26 +1,26 @@
 ---
 title: Transaction Script
-tags: [pattern, domain-logic]
-status: detailed
+tags: [padrao, logica-de-dominio]
+status: detalhado
 date: 2026-05-01
 ---
 
 # Transaction Script
 
-Organizes business logic by procedures where each procedure handles a single request from the presentation.
+Organiza a lógica de negócio por procedimentos, onde cada procedimento manipula uma única requisição da apresentação.
 
-## How it Works
-- Each logic piece is a procedure (script) that performs all the steps required for a specific business transaction.
-- It interacts directly with the database or through a simple [[Data_Gateway]].
-- Data is passed around in simple structures (DTOs, RecordSets).
+## Como Funciona
+- Cada parte da lógica é um procedimento (script) que executa todos os passos necessários para uma transação de negócio específica.
+- Interage diretamente com o banco de dados ou através de um [[Gateway_de_Dados]] simples.
+- Os dados são passados em estruturas simples (DTOs, RecordSets).
 
-## When to Use
-- Simple applications with straightforward business logic.
-- When the logic doesn't justify the overhead of a complex object model.
+## Quando Usar
+- Aplicações simples com lógica de negócio direta.
+- Quando a lógica não justifica a sobrecarga de um modelo de objetos complexo.
 
-## Comparison
-- vs. [[Domain_Model]]: Much simpler to implement but harder to maintain as logic complexity grows due to duplication and lack of OO structure.
-- vs. [[Table_Module]]: Less structured than Table Module, as logic is tied to actions rather than tables.
+## Comparação
+- vs. [[Domain_Model]]: Muito mais simples de implementar, mas difícil de manter à medida que a complexidade da lógica cresce devido à duplicação e falta de estrutura OO.
+- vs. [[Table_Module]]: Menos estruturado que o Table Module, pois a lógica está ligada a ações em vez de tabelas.
 
-## Source
-- [[PEAA_Book]] (Chapter 2, Page 120)
+## Fonte
+- [[Livro_PEAA]] (Capítulo 2, Página 120)

@@ -1,25 +1,25 @@
 ---
 title: Table Module
-tags: [pattern, domain-logic]
-status: detailed
+tags: [padrao, logica-de-dominio]
+status: detalhado
 date: 2026-05-01
 ---
 
 # Table Module
 
-A single instance that handles the business logic for all rows in a database table or view.
+Uma única instância que manipula a lógica de negócio para todas as linhas em uma tabela ou visualização de banco de dados.
 
-## How it Works
-- Unlike [[Domain_Model]], which has one object per record, Table Module has one object per *table*.
-- It typically works with a [[RecordSet]] (a data structure holding the results of a query).
-- Clients pass a record ID to the Table Module's methods to act on specific data.
+## Como Funciona
+- Ao contrário do [[Domain_Model]], que possui um objeto por registro, o Table Module possui um objeto por *tabela*.
+- Tipicamente trabalha com um [[RecordSet]] (uma estrutura de dados que contém os resultados de uma consulta).
+- Os clientes passam um ID de registro para os métodos do Table Module para atuar em dados específicos.
 
-## Benefits
-- **Integration**: Fits perfectly with platforms that emphasize RecordSets (like .NET or older COM-based systems).
-- **Structure**: More organized than [[Transaction_Script]] as logic is grouped by entity/table.
+## Benefícios
+- **Integração**: Ajusta-se perfeitamente a plataformas que enfatizam RecordSets (como .NET ou sistemas antigos baseados em COM).
+- **Estrutura**: Mais organizado que o [[Transaction_Script]], pois a lógica é agrupada por entidade/tabela.
 
-## Downsides
-- Cannot use fine-grained OO techniques like polymorphism for individual records.
+## Desvantagens
+- Não é possível usar técnicas OO de granularidade fina, como polimorfismo, para registros individuais.
 
-## Source
-- [[PEAA_Book]] (Chapter 2, Page 134)
+## Fonte
+- [[Livro_PEAA]] (Capítulo 2, Página 134)

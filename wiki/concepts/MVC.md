@@ -1,29 +1,29 @@
 ---
 title: Model-View-Controller (MVC)
-tags: [pattern, presentation]
-status: detailed
+tags: [padrao, apresentacao]
+status: detalhado
 date: 2026-05-01
 ---
 
 # Model-View-Controller (MVC)
 
-Splits a user interface into three distinct roles: the Model, the View, and the Controller.
+Divide uma interface de usuário em três papéis distintos: o Modelo (Model), a Visão (View) e o Controlador (Controller).
 
-## Components
-- **Model**: Represents the non-visual logic and data of the application. It is unaware of the View and Controller.
-- **View**: Responsible for rendering the Model's data into a user interface.
-- **Controller**: Handles user input, translates it into actions on the Model, and decides which View to show next.
+## Componentes
+- **Modelo**: Representa a lógica não visual e os dados da aplicação. Ele não tem conhecimento da Visão e do Controlador.
+- **Visão**: Responsável por renderizar os dados do Modelo em uma interface de usuário.
+- **Controlador**: Manipula a entrada do usuário, traduz em ações no Modelo e decide qual Visão mostrar a seguir.
 
-## Core Principle: Separated Presentation
-The key idea is to keep the Model (domain logic) independent of the UI. This allows for:
-- Testing the domain logic without a UI.
-- Having multiple UIs (e.g., Web and Mobile) for the same domain logic.
+## Princípio Fundamental: Apresentação Separada
+A ideia principal é manter o Modelo (lógica de domínio) independente da interface de usuário (UI). Isso permite:
+- Testar a lógica de domínio sem uma UI.
+- Ter múltiplas UIs (ex: Web e Mobile) para a mesma lógica de domínio.
 
-## MVC in the Web
-In web applications, MVC is slightly adapted:
-- The **View** is the HTML rendered in the browser.
-- The **Controller** is the server-side code (Servlet, Action, etc.) that handles the HTTP request.
-- The **Model** is the [[Domain_Model|Domain Layer]].
+## MVC na Web
+Em aplicações web, o MVC é levemente adaptado:
+- A **Visão** é o HTML renderizado no navegador.
+- O **Controlador** é o código do lado do servidor (Servlet, Action, etc.) que manipula a requisição HTTP.
+- O **Modelo** é a [[Domain_Model|Camada de Domínio]].
 
-## Source
-- [[PEAA_Book]] (Chapter 4, Page 330)
+## Fonte
+- [[Livro_PEAA]] (Capítulo 4, Página 330)

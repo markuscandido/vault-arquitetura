@@ -7,20 +7,20 @@ date: 2026-05-01
 
 # Data Mapper
 
-A layer of mappers that moves data between objects and a database while keeping them independent of each other and the mapper itself.
+Uma camada de mapeadores que move dados entre objetos e um banco de dados, mantendo-os independentes um do outro e do próprio mapeador.
 
-## How it Works
-- The [[Domain_Model]] objects are completely unaware of the database.
-- The Data Mapper handles the translation between the object network and the relational tables.
-- It is responsible for loading objects from the database and saving their state back.
+## Como Funciona
+- Os objetos do [[Domain_Model]] ignoram completamente o banco de dados.
+- O Data Mapper lida com a tradução entre a rede de objetos e as tabelas relacionais.
+- É responsável por carregar objetos do banco de dados e salvar seu estado de volta.
 
-## Benefits
-- **Full Decoupling**: Domain and database can evolve independently.
-- **Complex Mapping**: Handles cases where the object structure is very different from the database schema (e.g., inheritance, complex associations).
+## Benefícios
+- **Desacoplamento Total**: O domínio e o banco de dados podem evoluir independentemente.
+- **Mapeamento Complexo**: Lida com casos onde a estrutura do objeto é muito diferente do esquema do banco de dados (ex: herança, associações complexas).
 
-## Downsides
-- **Complexity**: It is the most complex mapping pattern to implement.
-- Often requires advanced techniques like Identity Map, Unit of Work, and Lazy Load.
+## Desvantagens
+- **Complexidade**: É o padrão de mapeamento mais complexo de implementar.
+- Frequentemente requer técnicas avançadas como [[Identity_Map]], [[Unit_of_Work]] e [[Lazy_Load]].
 
-## Source
-- [[PEAA_Book]] (Chapter 3, Page 170)
+## Fonte
+- [[Livro_PEAA]] (Capítulo 3, Página 170)

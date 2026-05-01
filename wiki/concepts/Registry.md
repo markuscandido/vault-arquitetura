@@ -1,28 +1,28 @@
 ---
 title: Registry
-tags: [pattern, base]
-status: detailed
+tags: [padrao, base]
+status: detalhado
 date: 2026-05-01
 ---
 
 # Registry
 
-A well-known object that other objects can use to find common objects and services.
+Um objeto bem conhecido que outros objetos podem usar para encontrar objetos e serviços comuns.
 
-## How it Works
-A Registry acts as a global point of access to find objects when you don't have a direct reference. It is often implemented using a **Singleton** or static methods.
+## Como Funciona
+Um Registry atua como um ponto global de acesso para encontrar objetos quando você não tem uma referência direta. Frequentemente é implementado usando um **Singleton** ou métodos estáticos.
 
-## Scopes
-- **Process Scope**: Data shared by the entire application process.
-- **Thread Scope**: Data specific to the current thread (e.g., a database connection).
-- **Session Scope**: Data specific to a user session.
+## Escopos
+- **Escopo de Processo**: Dados compartilhados por todo o processo da aplicação.
+- **Escopo de Thread**: Dados específicos para a thread atual (ex: uma conexão de banco de dados).
+- **Escopo de Sessão**: Dados específicos para uma sessão de usuário.
 
-## Implementation
-- **Static Methods**: Easy to call from anywhere: `Registry.personFinder()`.
-- **Interface vs Implementation**: It's best to have the Registry return an interface so the implementation can be swapped (e.g., for testing).
+## Implementação
+- **Métodos Estáticos**: Fácil de chamar de qualquer lugar: `Registry.personFinder()`.
+- **Interface vs Implementação**: É melhor que o Registry retorne uma interface para que a implementação possa ser trocada (ex: para testes).
 
-## Warning
-A Registry is effectively **Global Data**. Use it as a last resort. Prefer passing dependencies through constructors (Dependency Injection) whenever possible.
+## Aviso
+Um Registry é efetivamente **Dados Globais**. Use-o como último recurso. Prefira passar dependências através de construtores (Injeção de Dependência) sempre que possível.
 
-## Source
-- [[PEAA_Book]] (Chapter 18, Page 448)
+## Fonte
+- [[Livro_PEAA]] (Capítulo 18, Página 448)

@@ -7,20 +7,20 @@ date: 2026-05-01
 
 # Money
 
-Represents a monetary value, encapsulating the amount and the currency.
+Representa um valor monetário, encapsulando a quantia e a moeda.
 
-## Why is it Needed?
-Using simple floating-point numbers (like `double` or `float`) for money is a major anti-pattern due to rounding errors. A `Money` object ensures that calculations are precise and that different currencies are not accidentally mixed.
+## Por que é Necessário?
+Usar números de ponto flutuante simples (como `double` ou `float`) para dinheiro é um grande antipadrão devido a erros de arredondamento. Um objeto `Money` garante que os cálculos sejam precisos e que moedas diferentes não sejam misturadas acidentalmente.
 
-## Key Features
-- **Amount & Currency**: Stores both the numerical value (usually as a `long` of the smallest unit, like cents) and the currency type.
-- **Arithmetic Operations**: Provides methods for addition, subtraction, and comparison that check for currency compatibility.
-- **Rounding & Allocation**: Encapsulates logic for rounding and allocating money (e.g., splitting $0.05 into two accounts 70/30 without losing a cent).
-- **Format & Parsing**: Handles display and input in a currency-aware way.
+## Principais Características
+- **Quantia e Moeda**: Armazena tanto o valor numérico (geralmente como um `long` da menor unidade, como centavos) quanto o tipo de moeda.
+- **Operações Aritméticas**: Fornece métodos para adição, subtração e comparação que verificam a compatibilidade da moeda.
+- **Arredondamento e Alocação**: Encapsula a lógica para arredondamento e alocação de dinheiro (ex: dividir $0,05 em duas contas 70/30 sem perder um centavo).
+- **Formatação e Parsing**: Lida com a exibição e entrada de dados ciente da moeda.
 
-## Implementation Tips
-- Use **[[Value_Object]]** semantics (immutability).
-- Provide an `allocate` method to handle the "Foemmel's Conundrum" (allocating cents across multiple targets).
+## Dicas de Implementação
+- Use a semântica de **[[Value_Object]]** (imutabilidade).
+- Forneça um método `allocate` para lidar com o "Enigma de Foemmel" (alocação de centavos entre vários alvos).
 
-## Source
-- [[PEAA_Book]] (Chapter 18, Page 455)
+## Fonte
+- [[Livro_PEAA]] (Capítulo 18, Página 455)

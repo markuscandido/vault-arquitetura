@@ -1,29 +1,29 @@
 ---
 title: Unit of Work
-tags: [pattern, data-source, behavioral]
-status: detailed
+tags: [padrao, fonte-de-dados, comportamental]
+status: detalhado
 date: 2026-05-01
 ---
 
 # Unit of Work
 
-Maintains a list of objects affected by a business transaction and coordinates the writing out of changes and the resolution of concurrency problems.
+Mantém uma lista de objetos afetados por uma transação de negócio e coordena a escrita das mudanças e a resolução de problemas de concorrência.
 
-## How it Works
-A Unit of Work keeps track of everything you do during a business transaction that can affect the database. When you're done, the Unit of Work figures out everything that needs to be done to alter the database as a result of your work.
+## Como Funciona
+Uma Unit of Work rastreia tudo o que você faz durante uma transação de negócio que possa afetar o banco de dados. Quando você termina, a Unit of Work descobre tudo o que precisa ser feito para alterar o banco de dados como resultado do seu trabalho.
 
-### Key Responsibilities
-1. **Change Tracking**: Tracks which objects are new, dirty (modified), or deleted.
-2. **Commit Coordination**: When `commit()` is called, it opens a database transaction and executes all necessary INSERT, UPDATE, and DELETE commands.
-3. **Consistency**: Ensures that all changes are written or none are, maintaining the ACID properties of the business transaction.
+### Responsabilidades Chave
+1. **Rastreamento de Mudanças**: Rastreia quais objetos são novos, sujos (modificados) ou excluídos.
+2. **Coordenação do Commit**: Quando `commit()` é chamado, ela abre uma transação de banco de dados e executa todos os comandos INSERT, UPDATE e DELETE necessários.
+3. **Consistência**: Garante que todas as mudanças sejam escritas ou nenhuma seja, mantendo as propriedades ACID da transação de negócio.
 
-## Benefits
-- **Reduces Database Calls**: By batching updates, it minimizes the number of roundtrips to the database.
-- **Simplifies Domain Logic**: Developers don't have to remember to call `save()` on every object; the Unit of Work handles it.
-- **Concurrency Management**: It's a natural place to implement [[Optimistic_Offline_Lock]] checks.
+## Benefícios
+- **Reduz Chamadas ao Banco de Dados**: Ao agrupar atualizações, minimiza o número de viagens de ida e volta ao banco de dados.
+- **Simplifica a Lógica de Domínio**: Os desenvolvedores não precisam se lembrar de chamar `save()` em cada objeto; a Unit of Work cuida disso.
+- **Gerenciamento de Concorrência**: É um lugar natural para implementar verificações de [[Bloqueio_Offline_Otimista]].
 
-## Comparison
-- Without a Unit of Work, you might update the database every time you change a domain object, leading to many small, inefficient transactions.
+## Comparação
+- Sem uma Unit of Work, você poderia atualizar o banco de dados toda vez que alterasse um objeto de domínio, levando a muitas transações pequenas e ineficientes.
 
-## Source
-- [[PEAA_Book]] (Chapter 11, Page 187)
+## Fonte
+- [[Livro_PEAA]] (Capítulo 11, Página 187)

@@ -1,14 +1,14 @@
 ---
-title: Data Gateway
+title: Gateway de Dados
 tags: [data-source, pattern, seed]
 status: seed
 date: 2026-05-18
 ---
 
-# Data Gateway
+# Gateway de Dados
 
-TODO: Define the general concept of a Data Gateway.
+TODO: Definir o conceito geral de um Gateway de Dados.
 
-Refer to:
+Referência:
 - [[Table_Data_Gateway]]
 - [[Row_Data_Gateway]]

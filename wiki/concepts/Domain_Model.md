@@ -7,24 +7,24 @@ date: '2026-05-01'
 
 # Domain Model
 
-An object model of the domain that incorporates both behavior and data.
+Um modelo de objetos do domínio que incorpora tanto comportamento quanto dados.
 
-## How it Works
-- Creates a network of interconnected objects, where each object represents some meaningful individual part of the business (e.g., a specific Contract, an Invoice).
-- Business logic is distributed among these objects.
-- Uses OO techniques like inheritance, strategies, and state patterns to handle complexity.
+## Como Funciona
+- Cria uma rede de objetos interconectados, onde cada objeto representa alguma parte individual significativa do negócio (ex: um Contrato específico, uma Fatura).
+- A lógica de negócio é distribuída entre esses objetos.
+- Utiliza técnicas de OO como herança, estratégias (strategies) e padrões de estado (state patterns) para lidar com a complexidade.
 
-## When to Use
-- Complex and ever-changing business logic.
-- When you want to leverage OO benefits for long-term maintainability.
+## Quando Usar
+- Lógica de negócio complexa e em constante mudança.
+- Quando você deseja aproveitar os benefícios da OO para manutenibilidade a longo prazo.
 
-## Costs
-- **Complexity**: High learning curve for developers new to rich object models.
-- **Data Mapping**: Requires a sophisticated mapping layer (e.g., [[Data_Mapper]]) to sync objects with relational databases.
+## Custos
+- **Complexidade**: Curva de aprendizado acentuada para desenvolvedores não familiarizados com modelos de objetos ricos.
+- **Mapeamento de Dados**: Requer uma camada de mapeamento sofisticada (ex: [[Data_Mapper]]) para sincronizar objetos com bancos de dados relacionais.
 
-## Comparison
-- vs. [[Transaction_Script]]: Better for complex logic; handles duplication through OO abstractions.
-- vs. [[Table_Module]]: Domain Model has an instance for *each* record (e.g., an object for *each* Contract), whereas Table Module has one object for *all* records in a table.
+## Comparação
+- vs. [[Transaction_Script]]: Melhor para lógica complexa; lida com duplicação através de abstrações OO.
+- vs. [[Table_Module]]: O Domain Model possui uma instância para *cada* registro (ex: um objeto para *cada* Contrato), enquanto o Table Module possui um objeto para *todos* os registros em uma tabela.
 
-## Source
-- [[PEAA_Book]] (Chapter 2, Page 126)
+## Fonte
+- [[Livro_PEAA]] (Capítulo 2, Página 126)

@@ -1,25 +1,25 @@
 ---
 title: Template View
-tags: [pattern, presentation]
-status: detailed
+tags: [padrao, apresentacao]
+status: detalhado
 date: 2026-05-01
 ---
 
 # Template View
 
-Renders information into HTML by embedding markers in an HTML page.
+Renderiza informações em HTML incorporando marcadores em uma página HTML.
 
-## How it Works
-A Template View starts with the desired output (HTML) and allows you to "plug in" dynamic data from the model.
-- **Scriptlets**: Small pieces of code embedded directly in the HTML (e.g., `<?php echo $name; ?>`).
-- **Custom Tags**: Using specific markers that are replaced by the server (e.g., `<jsp:getProperty ... />`).
+## Como Funciona
+Um Template View começa com a saída desejada (HTML) e permite que você "conecte" dados dinâmicos vindos do modelo.
+- **Scriptlets**: Pequenos pedaços de código incorporados diretamente no HTML (ex: `<?php echo $name; ?>`).
+- **Tags Customizadas**: Usando marcadores específicos que são substituídos pelo servidor (ex: `<jsp:getProperty ... />`).
 
-## Benefits
-- **WYSIWYG Friendly**: Designers can often open the template in an editor and see roughly how it will look.
-- **Natural for Web**: Most developers are comfortable with this "HTML-first" approach.
+## Benefícios
+- **Amigável a WYSIWYG**: Designers frequentemente podem abrir o template em um editor e ver aproximadamente como ele ficará.
+- **Natural para a Web**: A maioria dos desenvolvedores está confortável com esta abordagem "HTML-first".
 
-## Downsides
-- **Tag Soup**: Logic can easily leak into the view, making it messy and hard to test.
+## Desvantagens
+- **Sopa de Tags (Tag Soup)**: A lógica pode facilmente vazar para a visão, tornando-a bagunçada e difícil de testar.
 
-## Source
-- [[PEAA_Book]] (Chapter 14, Page 333)
+## Fonte
+- [[Livro_PEAA]] (Capítulo 14, Página 333)

@@ -1,22 +1,22 @@
 ---
 title: Row Data Gateway
-tags: [pattern, data-source]
-status: detailed
+tags: [padrao, fonte-de-dados]
+status: detalhado
 date: 2026-05-01
 ---
 
 # Row Data Gateway
 
-An object that acts as a Gateway to a single record in a data source. There is one instance per row.
+Um objeto que atua como um Gateway para um único registro em uma fonte de dados. Existe uma instância por linha.
 
-## How it Works
-- The object has one field for each column in the database table.
-- It encapsulates the access to the record (e.g., getters/setters) but contains **no business logic**.
-- Usually provides an `update()` or `insert()` method to persist its state.
+## Como Funciona
+- O objeto possui um campo para cada coluna na tabela do banco de dados.
+- Ele encapsula o acesso ao registro (ex: getters/setters), mas não contém **nenhuma lógica de negócio**.
+- Geralmente fornece um método `update()` ou `insert()` para persistir seu estado.
 
-## When to Use
-- When you want to separate data access from business logic but still want an object-oriented view of the records.
-- Often used with [[Transaction_Script]].
+## Quando Usar
+- Quando você deseja separar o acesso a dados da lógica de negócio, mas ainda quer uma visão orientada a objetos dos registros.
+- Frequentemente usado com [[Transaction_Script]].
 
-## Source
-- [[PEAA_Book]] (Chapter 3, Page 160)
+## Fonte
+- [[Livro_PEAA]] (Capítulo 3, Página 160)

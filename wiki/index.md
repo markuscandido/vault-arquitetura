@@ -1,49 +1,59 @@
-# Wiki Index
+# Índice da Wiki
 
-Catalog of all knowledge pages.
+Catálogo de todas as páginas de conhecimento.
 
-## Sources
-- [[PEAA_Book]]: Patterns of Enterprise Application Architecture (Martin Fowler).
+## Fontes
+- [[Livro_PEAA]]: Patterns of Enterprise Application Architecture (Martin Fowler).
 
-## Entities
-*No entities defined yet.*
+## Entidades
+*Nenhuma entidade definida ainda.*
 
-## Concepts
-- [[Enterprise_Applications]]: Characteristics and challenges of enterprise systems.
-- [[Architecture]]: Subjective definition and focus in software development.
-- [[Layering]]: Fundamental decomposition technique.
-    - [[Presentation_Layer]]
-    - [[Domain_Layer]]
-    - [[Data_Source_Layer]]
+## Conceitos
+- [[Aplicacoes_Corporativas]]: Características e desafios de sistemas corporativos.
+- [[Arquitetura]]: Definição subjetiva e foco no desenvolvimento de software.
+- [[Camadas]]: Técnica fundamental de decomposição.
+    - [[Camada_de_Apresentacao]]
+    - [[Camada_de_Dominio]]
+    - [[Camada_de_Fonte_de_Dados]]
+- [[Apresentacao_Separada]]: Princípio de manter a UI independente da lógica.
+- [[Concorrencia]]: Gerenciamento de acesso simultâneo a dados.
 
-## Patterns
-### Presentation
-- [[MVC|Model-View-Controller (MVC)]]: Fundamental separation of UI and Logic.
-## Patterns
-### Domain Logic
-- [[Transaction_Script]]: Procedural organization of logic.
-- [[Domain_Model]]: Object-oriented organization of logic.
-- [[Table_Module]]: Table-oriented organization of logic.
-- [[Service_Layer]]: Application boundary and coordination.
+## Padrões
+### Apresentação
+- [[MVC]]: Separação fundamental de UI e Lógica.
+- [[Page_Controller]]: Um objeto manipulando requisições para uma página específica.
+- [[Template_View]]: Renderização de HTML com marcadores dinâmicos.
 
+### Lógica de Domínio
+- [[Transaction_Script]]: Organização procedural da lógica.
+- [[Domain_Model]]: Organização da lógica orientada a objetos.
+- [[Table_Module]]: Organização da lógica orientada a tabelas.
+- [[Camada_de_Servico]]: Limite da aplicação e coordenação.
 
-### Data Source Mapping
-- [[Table_Data_Gateway]]: One object per table for all records.
-- [[Row_Data_Gateway]]: One object per database record.
-- [[Active_Record]]: Record object that includes business logic.
-- [[Data_Mapper]]: Independent layer for object-relational mapping.
+### Mapeamento de Fonte de Dados
+- [[Table_Data_Gateway]]: Um objeto por tabela para todos os registros.
+- [[Row_Data_Gateway]]: Um objeto por registro de banco de dados.
+- [[Active_Record]]: Objeto de registro que inclui lógica de negócio.
+- [[Data_Mapper]]: Camada independente para mapeamento objeto-relacional.
 
-### Object-Relational Metadata & Behavior
-- [[Unit_of_Work]]: Managing database transactions.
-- [[Identity_Map]]: Ensuring object uniqueness.
-- [[Lazy_Load]]: On-demand data loading.
-- [[Identity_Field]]: Mapping primary keys to objects.
+### Comportamento e Metadados Objeto-Relacional
+- [[Unit_of_Work]]: Gerenciamento de transações de banco de dados.
+- [[Identity_Map]]: Garantia de unicidade de objetos.
+- [[Lazy_Load]]: Carregamento de dados sob demanda.
+- [[Campo_de_Identidade]]: Mapeamento de chaves primárias para objetos.
+- [[RecordSet]]: Estrutura de dados em memória representando tabelas.
 
-### Concurrency & Infrastructure
-- [[Optimistic_Offline_Lock]]: Version-based conflict detection.
-- [[Pessimistic_Offline_Lock]]: Lock-based conflict prevention.
-- [[Session_State]]: Managing user interaction state.
-- [[Distribution_Strategies]]: Why (not) to distribute objects.
+### Concorrência e Infraestrutura
+- [[Bloqueio_Offline_Otimista]]: Detecção de conflitos baseada em versão.
+- [[Bloqueio_Offline_Pessimista]]: Prevenção de conflitos baseada em bloqueio.
+- [[Estado_da_Sessao]]: Gerenciamento de estado de interação do usuário.
+- [[Estrategias_de_Distribuicao]]: Por que (não) distribuir objetos.
+- [[Fachada_Remota]]: Interface de granularidade grossa para comunicação remota.
 
-## Strategy & Synthesis
-- [[Synthesis]]: Guidelines for choosing the right patterns.
+### Padrões Básicos
+- [[Registry]]: Objeto bem conhecido para encontrar serviços.
+- [[Value_Object]]: Objeto cuja igualdade é baseada em valor, não identidade.
+- [[Caso_Especial]]: Subclasse para lidar com comportamentos específicos (ex: Null Object).
+
+## Estratégia e Síntese
+- [[Sintese]]: Diretrizes para escolher os padrões adequados.

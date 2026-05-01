@@ -7,18 +7,18 @@ date: 2026-05-01
 
 # Identity Map
 
-Ensures that each object gets loaded only once by keeping every loaded object in a map. Looks up objects using the map when referring to them.
+Garante que cada objeto seja carregado apenas uma vez, mantendo cada objeto carregado em um mapa. Busca objetos usando o mapa ao se referir a eles.
 
-## How it Works
-When you load data from a database, the Identity Map checks if it already has an object with that ID.
-- If **yes**: It returns the existing instance.
-- If **no**: It creates a new instance, puts it in the map, and returns it.
+## Como Funciona
+Quando você carrega dados de um banco de dados, o Identity Map verifica se já possui um objeto com aquele ID.
+- Se **sim**: Ele retorna a instância existente.
+- Se **não**: Ele cria uma nova instância, coloca-a no mapa e a retorna.
 
-## Why is it Needed?
-In a relational database, you identify a row by its primary key. In an OO environment, you identify an object by its reference or identity. Without an Identity Map, you might load the same database row into two different objects in memory. If you modify both, which one should be saved? The Identity Map prevents this "duplicate object" problem.
+## Por que é Necessário?
+Em um banco de dados relacional, você identifica uma linha por sua chave primária. Em um ambiente OO, você identifica um objeto por sua referência ou identidade. Sem um Identity Map, você pode carregar a mesma linha do banco de dados em dois objetos diferentes na memória. Se você modificar ambos, qual deles deve ser salvo? O Identity Map evita este problema de "objeto duplicado".
 
-## Scope
-Identity Maps are usually scoped to a single **Request** or **Transaction**. Keeping them globally across multiple sessions is dangerous as it leads to stale data and memory leaks.
+## Escopo
+Identity Maps são geralmente limitados a uma única **Requisição** ou **Transação**. Mantê-los globalmente em várias sessões é perigoso, pois leva a dados obsoletos e vazamentos de memória.
 
-## Source
-- [[PEAA_Book]] (Chapter 11, Page 196)
+## Fonte
+- [[Livro_PEAA]] (Capítulo 11, Página 196)
