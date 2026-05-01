@@ -12,6 +12,10 @@ This workspace follows the **LLM Wiki pattern**. It is a persistent, compounding
 
 ## Mandatory Workflows
 
+### 0. Language Policy
+- **Language**: All content in the `wiki/` directory MUST be maintained in **Brazilian Portuguese (PT-BR)**.
+- **Technical Terms**: Standard industry terms (e.g., "Unit of Work", "Active Record") should be kept in English when they are the primary name of a pattern, but descriptions and headings must be in Portuguese.
+
 ### 1. Ingest
 When a new source is added to `raw/`:
 1. **Read & Extract**: Analyze the source for key information, entities, and concepts.
