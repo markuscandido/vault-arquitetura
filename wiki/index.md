@@ -4,6 +4,7 @@ Catálogo de todas as páginas de conhecimento.
 
 ## Fontes
 - [[Livro_PEAA]]: Patterns of Enterprise Application Architecture (Martin Fowler).
+- [[Artigo_SPDD]]: Structured-Prompt-Driven Development (Martin Fowler).
 
 ## Entidades
 *Nenhuma entidade definida ainda.*
@@ -17,6 +18,9 @@ Catálogo de todas as páginas de conhecimento.
     - [[Camada_de_Fonte_de_Dados]]
 - [[Apresentacao_Separada]]: Princípio de manter a UI independente da lógica.
 - [[Concorrencia]]: Gerenciamento de acesso simultâneo a dados.
+- **Desenvolvimento Moderno Assistido por IA**:
+    - [[SPDD]]: Structured Prompt-Driven Development.
+    - [[Canvas_REASONS]]: Framework para prompts estruturados.
 
 ## Padrões
 ### Apresentação

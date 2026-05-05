@@ -22,5 +22,11 @@ No contexto do [[Livro_PEAA]], o foco é em:
 - Decompor aplicações em [[Camadas]].
 - Como essas camadas interagem.
 
+## Evolução e Abordagens Modernas
+
+### Arquitetura Orientada por Prompts (SPDD)
+Com a ascensão das IAs Generativas, a arquitetura ganha uma nova dimensão: a **Arquitetura de Intenções**. Metodologias como o [[SPDD]] propõem que o design e as decisões arquiteturais sejam capturados em prompts estruturados (como o [[Canvas_REASONS]]), tornando a intenção do arquiteto um artefato versionável e governável que direciona a geração automática de código.
+
 ## Fonte
 - [[Livro_PEAA]] (Introdução)
+- [[Artigo_SPDD]]

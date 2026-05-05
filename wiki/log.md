@@ -2,6 +2,13 @@
 
 Registro cronológico das atividades da wiki.
 
+## [2026-05-05] ingest | Structured Prompt-Driven Development (SPDD)
+- Ingestão do artigo de Martin Fowler/Thoughtworks sobre SPDD.
+- Criada página de fonte: [[Artigo_SPDD]].
+- Criados novos conceitos: [[SPDD]], [[Canvas_REASONS]].
+- Atualizado conceito de [[Arquitetura]] para incluir "Arquitetura de Intenções".
+- Atualizado o índice global da wiki.
+
 ## [2026-05-01] Inicialização
 - Estrutura da LLM Wiki inicializada.
 - Criado o esquema `GEMINI.md`.
